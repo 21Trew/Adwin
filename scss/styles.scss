@@ -1,0 +1,269 @@
+@import 'vars';
+@import 'fonts';
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    min-width: 375px;
+    overflow-x: hidden;
+}
+
+// Header__start
+
+.container {
+    padding: 5px 10px;
+    @media screen and (min-width: 1024px) {
+        padding: 10px 20px;
+    }
+    @media screen and (min-width: 1920px) {
+        padding: 50px 40px;
+    }
+}
+
+.header__inner {
+    min-height: 70px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__link-img {
+    width: 185px;
+    @media screen and (min-width: 1024px) {
+        width: 310px;
+    }
+    @media screen and (min-width: 1920px) {
+        width: 450px;
+    }
+}
+
+.write__btn {
+    background-color: $accent-dark;
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    border: none;
+    @media screen and (min-width: 1024px) {
+        min-width: 350px;
+        min-height: 97px;
+        border-radius: 65px;
+        &::after {
+            content: "Написать";
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Nunito-700";
+            font-size: 18px;
+            line-height: 90%;
+            letter-spacing: 1.08px;
+        }
+    }
+    @media screen and (min-width: 1920px) {
+        // margin-top: 40px;
+    }
+}
+
+.write__btn-img {
+    width: 24px;
+    height: 24px;
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+// Header__end
+
+.main {
+    height: auto;
+    // background-color: green;
+    background-color: $back;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px 30px 0 0;
+    @media screen and (min-width: 1024px) {
+        padding-top: 60px;
+    }
+    @media screen and (min-width: 1920px) {
+        padding: 80px 40px 0;
+    }
+}
+
+.main-container {
+    height: auto;
+    // background-color: red;
+    // border: 1px solid black;
+}
+
+.main-container__top {
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    };
+    @media screen and (min-width: 1920px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.main-container__header {
+    display: flex;
+    gap: 15px;
+    font-family: "Nunito-700";
+    font-size: 42px;
+    line-height: 90%;
+    @media screen and (min-width: 1024px) {
+        flex-direction: column;
+        font-size: 72px;
+    }
+}
+
+.main-container__header-first {
+    color: $accent-dark;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container__header-second {
+    color: $accent-dark;
+    margin: 0;
+    padding: 0;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    @media screen and (min-width: 1024px) {
+        min-height: 130px;
+        align-items: end;
+        gap: 10px;
+    }
+    @media screen and (min-width: 1920px) {
+        margin-right: 0;
+    }
+}
+
+.filter__btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 14px;
+    @media screen and (min-width: 1024px) {
+        padding: 20px;
+        gap: 7px;
+        min-width: 192px;
+        
+    }
+}
+
+.filter__btn:first-of-type {
+    background-color: $accent-light;
+}
+
+.filter__btn-img {
+    width: 24px;
+    height: 24px;
+}
+
+.filter__btn-item {
+    font-family: "Nunito-700";
+    font-size: 14px;
+    line-height: 110%;
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+    }
+}
+
+// Notes. Start
+
+.notes {
+    margin-top: 160px;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+    }
+}
+
+.notes-container__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 355px;
+    min-height: 520px;
+    padding: 34px 10px 50px;
+    border-radius: 10px;
+    border: 1px solid red;
+    position: relative;
+    @media screen and (min-width: 1024px) {
+        flex-wrap: wrap;
+        min-width: 480px;
+    }
+    @media screen and (min-width: 1920px) {
+        min-width: 587px;
+    }
+}
+
+.notes-container__item:first-of-type {
+    background-color: $accent-dark;
+    color: $back;
+}
+
+.notes-container__item-header {
+    font-family: "Nunito-700";
+    font-size: 26px;
+    line-height: 110%;
+    margin-bottom: 20px;
+}
+
+.notes-container__item-body {
+    font-family: "Nunito-400";
+    font-size: 18px;
+    line-height: 170%;
+}
+
+.notes-container__item-footer {
+    font-family: "Nunito-400";
+    font-size: 20px;
+    line-height: 120%;
+    color: $accent-light;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes-container__item-date,
+.notes-container__item-time {
+    display: flex;
+    gap: 10px;
+}
+
+.date-img, .time-img {
+    width: 24px;
+    height: 24px;
+}
+
+// Notes. End
